@@ -8,9 +8,9 @@ For this project, the front-end and back-end servers need to be set up separatel
 
 **Step 2:** Ensure you have two separate terminal windows open in your Code Editor.
 
-**Step 3:** Ensure your Node.js version is up to date (this was built using Node.js `v23.5.0`).
+**Step 3:** Ensure your Node.js version is up to date (this was built using Node.js `v23.5.0`). You can check your current Node.js version by running the command `node -v`.
 
-**Step 4:** Ensure `npm` is up to date (`v11.0.0` was used here).
+**Step 4:** Ensure `npm` is up to date (`v11.0.0` was used here). You can check your current `npm` version by running the command `npm -v`.
 
 
 
