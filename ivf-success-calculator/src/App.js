@@ -127,6 +127,7 @@ function App() {
         }
 
         const result = await response.json();
+        console.log(result);
         setProgress(parseFloat(result.success_rate.toFixed(0))); // Assuming the result contains a success parameter
         setOpen(true); // Open the modal
       } catch (error) {
@@ -182,6 +183,7 @@ function App() {
                   <Typography variant="body1" align="left">How old are you?</Typography>
                   <TextField
                     id="age"
+                    data-testid="age"
                     name="age"
                     type="number"
                     InputProps={{ inputProps: { min: 20, max: 50 } }}
@@ -199,6 +201,7 @@ function App() {
                   <Typography variant="body1" align="left">How much do you weigh?</Typography>
                   <TextField
                     id="weight"
+                    data-testid="weight"
                     name="weight"
                     type="number"
                     InputProps={{ inputProps: { min: 80, max: 300 } }}
@@ -217,6 +220,7 @@ function App() {
                   <Box display="flex" gap={2}>
                     <TextField
                       id="height-feet"
+                      data-testid="height-feet"
                       name="heightFeet"
                       type="number"
                       InputProps={{ inputProps: { min: 3, max: 8 } }}
@@ -231,6 +235,7 @@ function App() {
                     />
                     <TextField
                       id="height-inches"
+                      data-testid="height-inches"
                       name="heightInches"
                       type="number"
                       InputProps={{ inputProps: { min: 0, max: 11 } }}
@@ -246,12 +251,13 @@ function App() {
                   </Box>
                 </Box>
                 <Box marginBottom={1}>
-                  <Typography variant="body1" align="left">How many times have you used IVF in the past (include all cycles, even those not resulting in pregnancy)?</Typography>
+                  <Typography id="ivf-usage-label" data-testid="ivf-usage-label" variant="body1" align="left">How many times have you used IVF in the past (include all cycles, even those not resulting in pregnancy)?</Typography>
                   <FormControl variant="outlined" margin="dense" fullWidth error={!!errors.ivfUsage}>
-                    <InputLabel id="ivf-usage-label">Select an option</InputLabel>
+                    <InputLabel>Select an option</InputLabel>
                     <Select
                       labelId="ivf-usage-label"
                       id="ivf-usage"
+                      data-testid="ivf-usage"
                       name="ivfUsage"
                       label="Select an option"
                       value={formValues.ivfUsage}
@@ -266,12 +272,13 @@ function App() {
                   </FormControl>
                 </Box>
                 <Box marginBottom={1}>
-                  <Typography variant="body1" align="left">How many prior pregnancies have you had?</Typography>
+                  <Typography id="prior-pregnancies-label" data-testid="prior-pregnancies-label" variant="body1" align="left">How many prior pregnancies have you had?</Typography>
                   <FormControl variant="outlined" margin="dense" fullWidth error={!!errors.priorPregnancies}>
-                    <InputLabel id="prior-pregnancies-label">Select an option</InputLabel>
+                    <InputLabel>Select an option</InputLabel>
                     <Select
                       labelId="prior-pregnancies-label"
                       id="prior-pregnancies"
+                      data-testid="prior-pregnancies"
                       name="priorPregnancies"
                       label="Select an option"
                       value={formValues.priorPregnancies}
@@ -286,12 +293,13 @@ function App() {
                 </Box>
                 {formValues.priorPregnancies && formValues.priorPregnancies !== 'none' && (
                   <Box marginBottom={1}>
-                    <Typography variant="body1" align="left">How many prior live births have you had?</Typography>
+                    <Typography id="prior-births-label" data-testid="prior-births-label" variant="body1" align="left">How many prior live births have you had?</Typography>
                     <FormControl variant="outlined" margin="dense" fullWidth error={!!errors.priorBirths}>
-                      <InputLabel id="prior-births-label">Select an option</InputLabel>
+                      <InputLabel>Select an option</InputLabel>
                       <Select
                         labelId="prior-births-label"
                         id="prior-births"
+                        data-testid="prior-births"
                         name="priorBirths"
                         label="Select an option"
                         value={formValues.priorBirths}
@@ -371,12 +379,13 @@ function App() {
                   </FormControl>
                 </Box>
                 <Box marginBottom={1}>
-                  <Typography variant="body1" align="left">What is the source of your eggs?</Typography>
+                  <Typography id="egg-source-label" data-testid="egg-source-label" variant="body1" align="left">What is the source of your eggs?</Typography>
                   <FormControl variant="outlined" margin="dense" fullWidth error={!!errors.eggSource}>
-                    <InputLabel id="egg-source-label">Select an option</InputLabel>
+                    <InputLabel>Select an option</InputLabel>
                     <Select
                       labelId="egg-source-label"
                       id="egg-source"
+                      data-testid="egg-source"
                       name="eggSource"
                       label="Select an option"
                       value={formValues.eggSource}
@@ -415,12 +424,12 @@ function App() {
               <CloseIcon />
             </IconButton>
             <Box display="flex" justifyContent="center" alignItems="center" className="popupBox" position="relative">
-            <Doughnut
-              data={data}
-            />
-            <Typography variant="h2" component="h1" gutterBottom className="result">
-            {progress}%
-          </Typography>
+              <Doughnut
+                data={data}
+              />
+              <Typography variant="h2" component="h1" gutterBottom className="result">
+                {progress}%
+              </Typography>
             </Box>
           </Box>
         </Modal>
