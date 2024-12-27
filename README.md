@@ -1,16 +1,16 @@
-# Getting Started with IVF Success Calculator App
+# Getting Started with `IVF Success Calculator App`
 
-This version of the IVF Success Calculator was built to mimic the version available on the official CDC website. The same front-end setup is used for the form and identical formulas are used in the back-end for result calculations.
+This version of the IVF Success Calculator was built to mimic the version available on the official CDC website (https://www.cdc.gov/art/ivf-success-estimator/). A similar front-end setup is used for the form and identical formulas are used in the back-end for result calculations.
 
 For this project, the front-end and back-end servers need to be set up separately. Before we get started, please go through the following steps to make sure you have the project ready to go:
 
-Step 1: Clone the repository to your computer and open the folder in your desired Code Editor.
+**Step 1:** Clone the repository to your computer and open the folder in your desired Code Editor.
 
-Step 2: Ensure you have two separate terminal windows open in your Code Editor.
+**Step 2:** Ensure you have two separate terminal windows open in your Code Editor.
 
-Step 3: Ensure your Node.js version is up to date (this was built using Node.js v23.5.0).
+**Step 3:** Ensure your Node.js version is up to date (this was built using Node.js v23.5.0).
 
-Step 4: Ensure npm is up to date (v11.0.0 was used here).
+**Step 4:** Ensure npm is up to date (v11.0.0 was used here).
 
 
 
@@ -18,13 +18,13 @@ Step 4: Ensure npm is up to date (v11.0.0 was used here).
 
 The front-end of this application was developed using a React framework. In order to run the front-end on your local server, please follow these steps:
 
-Step 1: In the first terminal window, `cd` into the ivf-success-calculator folder using the command `cd ivf-success-calculator`.
+**Step 1:** In the first terminal window, `cd` into the ivf-success-calculator folder using the command `cd ivf-success-calculator`.
 
-Step 2: Run the command `npm install` to install all packages needed for this project to run properly.
+**Step 2:** Run the command `npm install` to install all packages needed for this project to run properly.
 
-Step 3: Run all tests using the command `npm run test` to ensure front-end rendering test cases are passing properly.
+**Step 3:** Run all tests using the command `npm run test` to ensure front-end rendering test cases are passing properly.
 
-Step 4: Run the command `npm run start` to start the development server (the default URL for this is localhost:3000). This should open up your default browser to the URL http://localhost:3000/. If that doesn't happen, then feel free to copy and paste that URL in the browser to access the front-end UI of the application.
+**Step 4:** Run the command `npm run start` to start the development server (the default URL for this is localhost:3000). This should open up your default browser to the URL http://localhost:3000/. If that doesn't happen, then feel free to copy and paste that URL in the browser to access the front-end UI of the application.
 
 
 
@@ -32,13 +32,13 @@ Step 4: Run the command `npm run start` to start the development server (the def
 
 The back-end of this application was developed using an Express.js framework. In order to run the back-end on your local server, please follow these steps:
 
-Step 1: In the second terminal window, `cd` into the ivf-success-express folder using the command `cd ivf-success-express`.
+**Step 1:** In the second terminal window, `cd` into the ivf-success-express folder using the command `cd ivf-success-express`.
 
-Step 2: Run the command `npm install` to install all packages needed for this project to run properly.
+**Step 2:** Run the command `npm install` to install all packages needed for this project to run properly.
 
-Step 3: Run all tests using the command `npm run test` to ensure back-end formula-based test cases are passing properly.
+**Step 3:** Run all tests using the command `npm run test` to ensure back-end formula-based test cases are passing properly.
 
-Step 4: Run the command `npm start` to start the back-end server (hosted by default at Port 3001).
+**Step 4:** Run the command `npm start` to start the back-end server (hosted by default at Port 3001).
 
 
 
