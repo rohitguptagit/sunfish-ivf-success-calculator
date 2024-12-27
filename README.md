@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Getting Started with IVF Success Calculator App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This version of the IVF Success Calculator was built to mimic the version available on the official CDC website. The same front-end setup is used for the form and identical formulas are used in the back-end for result calculations.
 
-## Available Scripts
+For this project, the front-end and back-end servers need to be set up separately. Before we get started, please go through the following steps to make sure you have the project ready to go:
 
-In the project directory, you can run:
+Step 1: Clone the repository to your computer and open the folder in your desired Code Editor.
 
-### `npm start`
+Step 2: Ensure you have two separate terminal windows open in your Code Editor.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Step 3: Ensure your Node.js version is up to date (this was built using Node.js v23.5.0).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Step 4: Ensure npm is up to date (v11.0.0 was used here).
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Front-End Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The front-end of this application was developed using a React framework. In order to run the front-end on your local server, please follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Step 1: In the first terminal window, `cd` into the ivf-success-calculator folder using the command `cd ivf-success-calculator`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Step 2: Run the command `npm install` to install all packages needed for this project to run properly.
 
-### `npm run eject`
+Step 3: Run all tests using the command `npm run test` to ensure front-end rendering test cases are passing properly.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Step 4: Run the command `npm run start` to start the development server (the default URL for this is localhost:3000). This should open up your default browser to the URL http://localhost:3000/. If that doesn't happen, then feel free to copy and paste that URL in the browser to access the front-end UI of the application.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Back-End Setup
 
-## Learn More
+The back-end of this application was developed using an Express.js framework. In order to run the back-end on your local server, please follow these steps:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Step 1: In the second terminal window, `cd` into the ivf-success-express folder using the command `cd ivf-success-express`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Step 2: Run the command `npm install` to install all packages needed for this project to run properly.
 
-### Code Splitting
+Step 3: Run all tests using the command `npm run test` to ensure back-end formula-based test cases are passing properly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Step 4: Run the command `npm start` to start the back-end server (hosted by default at Port 3001).
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Ready to Go!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+At this stage, you should have both the front-end and the back-end up and running. Feel free to use different form values within the application to test different results for each calculation.
 
-### Advanced Configuration
+### Notes:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* The application has error handling built in to the front-end to ensure numerical input submission ranges are satisfied and all required fields are populated.
 
-### Deployment
+* The form can be reset using the 'Start Over' button at the bottom of the page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Clicking the 'Calculate Success' button sends the form submission elements to the pre-configured REST API (POST request) endpoint which signals the Express.js back-end setup to perform the calculation.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* After the calculation has been completed, a modal containing a Doughnut Chart should appear with the Success Rate result appearing in the middle of the chart as a percentage. The pink portion of the chart represents the Success Rate while the white portion represents the failure rate. The modal can be closed by clicking the close icon at the top right of the page or by hitting the `Esc` key.
