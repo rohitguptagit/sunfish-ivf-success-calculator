@@ -58,6 +58,7 @@ body {
   background-color: var(--bg);
   color: #fff;
   font-family: "Inter", "DM Sans", Arial, sans-serif;
+  user-select: none;
 }
 
 .checkboxLabel {
@@ -91,6 +92,11 @@ body {
   backdrop-filter: blur(5px);
 }
 
+.popupBox {
+  height: 50vh;
+  width: 50vw;
+}
+
 .title {
   font-size: var(--fs);
   font-weight: 800;
@@ -100,6 +106,20 @@ body {
   overflow: hidden;
   background: #121212;
   margin: 0;
+}
+
+.result {
+  font-size: var(--fs);
+  font-weight: 800;
+  letter-spacing: var(--ls);
+  margin-bottom: 2rem !important;
+  position: relative;
+  overflow: hidden;
+  background: none;
+  margin: 0;
+  left: -17.5rem;
+  top: 2rem;
+  color: #8FC9F9;
 }
 
 .aurora {

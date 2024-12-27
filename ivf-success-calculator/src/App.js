@@ -127,7 +127,7 @@ function App() {
         }
 
         const result = await response.json();
-        setProgress(result.success_rate); // Assuming the result contains a success parameter
+        setProgress(parseFloat(result.success_rate.toFixed(0))); // Assuming the result contains a success parameter
         setOpen(true); // Open the modal
       } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
@@ -146,12 +146,12 @@ function App() {
         label: 'IVF Success Rate',
         data: [progress, 100 - progress],
         backgroundColor: [
-          'red',
-          'gray'
+          '#CE92D8',
+          'white'
         ],
         borderColor: [
-          'red',
-          'gray'
+          'white',
+          'white'
         ],
         borderWidth: 1,
       },
@@ -390,7 +390,7 @@ function App() {
                 </Box>
               </Box>
             </Box>
-            <Box display="flex" justifyContent="center" gap={2} marginTop={6}>
+            <Box display="flex" justifyContent="center" gap={2} marginTop={2}>
               <Button variant="contained" color="primary" type="submit">
                 Calculate Success
               </Button>
@@ -414,10 +414,13 @@ function App() {
             >
               <CloseIcon />
             </IconButton>
-            <Box display="flex" justifyContent="center" alignItems="center" height="50vh" position="relative">
+            <Box display="flex" justifyContent="center" alignItems="center" className="popupBox" position="relative">
             <Doughnut
               data={data}
             />
+            <Typography variant="h2" component="h1" gutterBottom className="result">
+            {progress}%
+          </Typography>
             </Box>
           </Box>
         </Modal>
