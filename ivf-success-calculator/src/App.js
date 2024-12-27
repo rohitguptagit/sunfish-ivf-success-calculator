@@ -128,8 +128,8 @@ function App() {
 
         const result = await response.json();
         console.log(result);
-        setProgress(parseFloat(result.success_rate.toFixed(0))); // Assuming the result contains a success parameter
-        setOpen(true); // Open the modal
+        setProgress(parseFloat(result.success_rate.toFixed(0)));
+        setOpen(true);
       } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
       }
