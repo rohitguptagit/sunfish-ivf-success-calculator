@@ -112,13 +112,13 @@ body {
   font-size: var(--fs);
   font-weight: 800;
   letter-spacing: var(--ls);
-  margin-bottom: 2rem !important;
-  position: relative;
+  position: absolute;
+  top: 52%;
+  left: 51%;
+  transform: translate(-50%, -50%);
   overflow: hidden;
   background: none;
   margin: 0;
-  left: -17.5rem;
-  top: 2rem;
   color: #8FC9F9;
 }
 
