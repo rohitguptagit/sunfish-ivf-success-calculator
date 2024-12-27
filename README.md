@@ -8,9 +8,9 @@ For this project, the front-end and back-end servers need to be set up separatel
 
 **Step 2:** Ensure you have two separate terminal windows open in your Code Editor.
 
-**Step 3:** Ensure your Node.js version is up to date (this was built using Node.js v23.5.0).
+**Step 3:** Ensure your Node.js version is up to date (this was built using Node.js `v23.5.0`).
 
-**Step 4:** Ensure npm is up to date (v11.0.0 was used here).
+**Step 4:** Ensure `npm` is up to date (`v11.0.0` was used here).
 
 
 
@@ -38,7 +38,7 @@ The back-end of this application was developed using an Express.js framework. In
 
 **Step 3:** Run all tests using the command `npm run test` to ensure back-end formula-based test cases are passing properly.
 
-**Step 4:** Run the command `npm start` to start the back-end server (hosted by default at Port 3001).
+**Step 4:** Run the command `npm start` to start the back-end server (hosted by default at Port `3001`).
 
 
 
