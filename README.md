@@ -44,7 +44,7 @@ The back-end of this application was developed using an Express.js framework. In
 
 ## Ready to Go!
 
-At this stage, you should have both the front-end and the back-end up and running. Feel free to use different form values within the application to test different results for each calculation.
+At this stage, you should have both the front-end and the back-end up and running. Feel free to use different form values within the application to test different results for each calculation. You can submit the form request using the 'Calculate Success' button at the bottom of the page. You will receive a response in the form of an object containing the score and the success rate (this can be viewed using the browser console). The visual representation of the response is discussed below.
 
 ### Notes:
 
