@@ -20,7 +20,7 @@ The front-end of this application was developed using a React framework. In orde
 
 **Step 1:** In the first terminal window, `cd` into the ivf-success-calculator folder using the command `cd ivf-success-calculator`.
 
-**Step 2:** Run the command `npm install` to install all packages needed for this project to run properly.
+**Step 2:** Run the command `npm install --legacy-peer-deps` to install all packages needed for this project to run properly.
 
 **Step 3:** Run all tests using the command `npm run test` to ensure front-end rendering test cases are passing properly.
 
